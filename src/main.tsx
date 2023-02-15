@@ -1,31 +1,47 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Sparkle } from "phosphor-react";
 
 import "./global.css";
 
-import twitterLogo from "./assets/logo-twitter.svg";
+import { Tweet } from "./components/Tweet";
+import { Sidebar } from "./components/Sidebar";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <div className="layout">
-      <aside className="sidebar">
-        <img className="logo" src={twitterLogo} alt="logo" />
+      <Sidebar />
+      <div className="content">
+        <main className="timeline">
+          <div className="timeline-header">
+            Home
+            <Sparkle />
+          </div>
 
-        <nav className="main-navigation">
-          <a href="">Home</a>
-          <a href="">Explore</a>
-          <a href="">Notifications</a>
-          <a href="">Messages</a>
-          <a href="">Bookmarks</a>
-          <a href="">Lists</a>
-          <a href="">Profile</a>
-          <a href="">More</a>
-        </nav>
-        <button className="new-tweet" type="button">
-          Tweet
-        </button>
-      </aside>
-      <div className="content">Content</div>
+          <form action="" className="new-tweet-form">
+            <label htmlFor="tweet">
+              <img
+                src="https://github.com/clevessonmendonca.png"
+                alt="Clevesson Mendonça"
+              />
+              <textarea
+                name=""
+                id="tweet"
+                placeholder="What's happening?"
+              ></textarea>
+            </label>
+
+            <button type="submit">Tweet</button>
+          </form>
+
+          <div className="separator" />
+
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+        </main>
+      </div>
     </div>
   </React.StrictMode>
 );
