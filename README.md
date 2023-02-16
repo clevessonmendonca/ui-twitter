@@ -12,11 +12,11 @@ You can find the application UI design here: [https://www.figma.com/file/YRor24p
 
 ![UI Twiiter](/.github/layout.png)
 
-##Technologies
+## Technologies
 
-Reactjs
-Typescript
-React-Router-DOM
+ * Reactjs
+ * Typescript
+ * React-Router-DOM
 
 ## Building
 
