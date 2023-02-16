@@ -12,6 +12,12 @@ You can find the application UI design here: [https://www.figma.com/file/YRor24p
 
 ![UI Twiiter](/.github/layout.png)
 
+##Technologies
+
+Reactjs
+Typescript
+React-Router-DOM
+
 ## Building
 
 You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
