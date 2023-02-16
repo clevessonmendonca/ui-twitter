@@ -8,6 +8,7 @@ import {
   FileText,
   Hash,
   House,
+  Pencil,
   User,
 } from "phosphor-react";
 
@@ -21,39 +22,40 @@ export const Sidebar = () => {
 
       <nav className="main-navigation">
         <NavLink to="/">
-          <House weight="fill" /> Home
+          <House weight="fill" /> <span>Home</span>
         </NavLink>
-        <Link to="">
+        <a >
           <Hash />
-          Explore
-        </Link>
-        <Link to="">
+          <span>Explore</span>
+        </a>
+        <a >
           <Bell />
-          Notifications
-        </Link>
-        <Link to="">
+          <span>Notifications</span>
+        </a>
+        <a >
           <Envelope />
-          Messages
-        </Link>
-        <Link to="">
+          <span>Messages</span>
+        </a>
+        <a >
           <BookmarkSimple />
-          Bookmarks
-        </Link>
-        <Link to="">
+          <span>Bookmarks</span>
+        </a>
+        <a >
           <FileText />
-          Lists
-        </Link>
-        <Link to="">
+          <span>Lists</span>
+        </a>
+        <a >
           <User />
-          Profile
-        </Link>
-        <Link to="">
+          <span>Profile</span>
+        </a>
+        <a >
           <DotsThree />
-          More
-        </Link>
+          <span>More</span>
+        </a>
       </nav>
       <button className="new-tweet" type="button">
-        Tweet
+        <Pencil />
+        <span>Tweet</span>
       </button>
     </aside>
   );

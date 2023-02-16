@@ -1,3 +1,4 @@
+import { PaperPlaneRight } from "phosphor-react";
 import { FormEvent, KeyboardEvent, useState } from "react";
 import { Header } from "../components/Header";
 import { Separator } from "../components/Separator";
@@ -27,7 +28,7 @@ export const Status = () => {
   }
 
   function handleHotKeySubmit(event: KeyboardEvent) {
-    if(event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
       setAnswers([newAnswer, ...answers]);
       setNewAnswer("");
     }
@@ -56,7 +57,10 @@ export const Status = () => {
           ></textarea>
         </label>
 
-        <button type="submit">Answer</button>
+        <button type="submit">
+          <PaperPlaneRight /> 
+          <span>Answer</span>
+        </button>
       </form>
 
       {answers.map((answer, i) => {
