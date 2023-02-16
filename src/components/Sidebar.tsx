@@ -12,6 +12,7 @@ import {
 } from "phosphor-react";
 
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   return (
@@ -19,37 +20,37 @@ export const Sidebar = () => {
       <img className="logo" src={twitterLogo} alt="logo" />
 
       <nav className="main-navigation">
-        <a className="active" href="">
+        <Link className="active" to="/">
           <House weight="fill" /> Home
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <Hash />
           Explore
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <Bell />
           Notifications
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <Envelope />
           Messages
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <BookmarkSimple />
           Bookmarks
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <FileText />
           Lists
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <User />
           Profile
-        </a>
-        <a href="">
+        </Link>
+        <Link to="">
           <DotsThree />
           More
-        </a>
+        </Link>
       </nav>
       <button className="new-tweet" type="button">
         Tweet

@@ -4,6 +4,8 @@ import { Tweet } from "../components/Tweet";
 
 const answers = ["Concordo", "Faz sentido!", "Fogo em"];
 
+import './Status.css'
+
 export const Status = () => {
   return (
     <main className="status">
