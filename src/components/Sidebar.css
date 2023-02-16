@@ -43,7 +43,7 @@
   text-decoration: none;
 }
 
-.main-navigation a.ative {
+.main-navigation a.active {
   color: var(--twitter-blue);
 }
 

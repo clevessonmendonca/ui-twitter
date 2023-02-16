@@ -22,7 +22,6 @@ export const Status = () => {
             alt="Clevesson Mendonça"
           />
           <textarea
-            name=""
             id="tweet"
             placeholder="Tweet your answer"
           ></textarea>
