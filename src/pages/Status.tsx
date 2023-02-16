@@ -1,12 +1,31 @@
+import { FormEvent, useState } from "react";
 import { Header } from "../components/Header";
 import { Separator } from "../components/Separator";
 import { Tweet } from "../components/Tweet";
 
 const answers = ["Concordo", "Faz sentido!", "Fogo em"];
 
-import './Status.css'
+import "./Status.css";
 
 export const Status = () => {
+  const [newAnswer, setNewAnswer] = useState("");
+  const [answers, setAnswers] = useState([
+    `Acabei de migrar um projeto React GIGANTE de create-react-app para
+    Vite e os resultados foram:
+    ✅ npm start: De 32s para 400ms (sim, demorava 30s)
+    ✅ npm build: De 120s para 22s Além disso, troquei do
+    Yarn para o PNPM e o install das deps mudou de 24s para 8s 🔥`,
+    "Second Tweet",
+    "Thirt Tweet",
+  ]);
+
+  function createNewAnswer(event: FormEvent) {
+    event.preventDefault();
+
+    setAnswers([newAnswer, ...answers]);
+    setNewAnswer("");
+  }
+
   return (
     <main className="status">
       <Header title="Tweet" />
@@ -15,7 +34,7 @@ export const Status = () => {
 
       <Separator />
 
-      <form action="" className="answer-tweet-form">
+      <form onSubmit={createNewAnswer} className="answer-tweet-form">
         <label htmlFor="tweet">
           <img
             src="https://github.com/clevessonmendonca.png"
@@ -23,6 +42,8 @@ export const Status = () => {
           />
           <textarea
             id="tweet"
+            value={newAnswer}
+            onChange={(event) => setNewAnswer(event.target.value)}
             placeholder="Tweet your answer"
           ></textarea>
         </label>
